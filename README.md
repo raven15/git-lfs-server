@@ -56,6 +56,27 @@ boltbrowser lfs.db
 ## docker
 
 
+## 
+
+```
+git push --no-verify github github:main 
+Uploading LFS objects: 100% (2/2), 263 MB | 0 B/s, done.
+枚举对象中: 15, 完成.
+对象计数中: 100% (15/15), 完成.
+使用 14 个线程进行压缩
+压缩对象中: 100% (12/12), 完成.
+写入对象中: 100% (13/13), 2.01 KiB | 686.00 KiB/s, 完成.
+Total 13 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote: error: GH008: Your push referenced at least 2 unknown Git LFS objects:
+remote:     b42980bf0c920af7cd25df7d9e1cf2c2cef5eb466ce692451596ce34e0d90c21
+remote:     8683cdc3d6c029b49393dcebbaa6265bd6efd9abdcf837be855b4cd42e5e80b6
+remote: Try to push them with 'git lfs push --all'.
+To github.com:raven15/software.git
+ ! [remote rejected] github -> main (pre-receive hook declined)
+错误：无法推送一些引用到 'github.com:raven15/software.git'
+```
+
 ## 参考资料
 
 - https://github.com/git-lfs/lfs-test-server
