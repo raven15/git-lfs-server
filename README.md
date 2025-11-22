@@ -59,6 +59,11 @@ boltbrowser lfs.db
 ## 
 
 ```
+这会禁用（客户端）的pre-push hook，但不会禁用（服务器端）的pre-receive hook。大多数Git服务器（例如GitLab）都实现了这样一个hook来检查丢失的LFS对象。
+
+用github 做实验，github 如果一个仓库提交过lfs文件就会启用这个钩子，再次提交的时候如果lfs文件没有上传就会出错。
+所以删除仓库后，重新建了一个同名仓库。再次上传，使用不上传 lfs 参数或者使用私有 lfs 服务器，就会通过。
+
 git push --no-verify github github:main 
 Uploading LFS objects: 100% (2/2), 263 MB | 0 B/s, done.
 枚举对象中: 15, 完成.
